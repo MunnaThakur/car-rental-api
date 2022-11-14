@@ -4,10 +4,7 @@ const carBooking = mongoose.Schema({
     userId : {
         type : Number
     },
-    userName : {
-        type : String
-    },
-    carImage : {
+    image : {
         type : String
     },
     carTitle : {

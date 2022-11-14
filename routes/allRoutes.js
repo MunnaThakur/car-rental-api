@@ -4,6 +4,7 @@ const path = require("path");
 const carCategoryController = require("../controller/carCategoryController");
 const carDetailsController = require("../controller/carDetailsController");
 const registerController = require("../controller/registerController");
+const carBookingController = require("../controller/carBookingController");
 const protection = require("../middlewares/protection");
 
 
@@ -65,6 +66,12 @@ route.get("/all-cars", carDetailsController.allCars);
 route.get("/single-car/:id", carDetailsController.findSingleDetails);
 //findbyid get a perticular cars
 route.get("/car/:catName", carDetailsController.findByCategory);
+
+
+
+
+//Route of car Booking
+route.post("/car-booking", carBookingController.carBooking)
 
 
 

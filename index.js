@@ -10,11 +10,11 @@ app.use(express.json({limit: "30mb", extended:true}));
 app.use(express.urlencoded({limit:"30mb", extended: true}));
 
 app.use(
-    cors({
-      origin: "*",
-      credentials: true,
-    })
-  );
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
   
 
 //connect to mongodb
@@ -24,6 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 //Route
 app.use("/api", allRoute)
+
 //category image route
 app.use("/brandLogo", express.static('upload/logos'))
 
